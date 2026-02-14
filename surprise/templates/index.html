@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday 🤍</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Happy Birthday, <span class="pink">Risha</span> 🤍</h1>
+    <p class="subtitle">Every memory is better because you're in it.</p>
+
+    <!-- Letter Button -->
+    <button onclick="revealLetter()" class="main-btn">
+    Open Your Letter ♡
+</button>
+
+<audio autoplay loop>
+    <source src="{% static 'music.mp3' %}" type="audio/mpeg">
+</audio>
+
+
+    <!-- Hidden Letter -->
+    <div id="letterBox" class="letter">
+
+        <p>
+            Happy Birthday beautiful 🤍 You are truly so pretty, and you have a heart that’s even more beautiful than your smile.
+            You matter to me more than you know, and that smile of yours can light up any room.
+            Please stay exactly the way you are kind, strong, and effortlessly amazing.
+            Keep smiling always, no matter what life brings.
+            And remember, whatever happens, I’m just one call away.
+        </p>
+    </div>
+
+    <br><br>
+
+    <!-- Gallery Button -->
+    <a href="{% url 'gallery' %}">
+        <button class="main-btn">
+            See Our Memories ♡
+        </button>
+    </a>
+
+</div>
+
+<!-- Floating Hearts Container -->
+<div class="hearts"></div>
+<div class="flowers"></div>
+
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>
+
+
